@@ -21,7 +21,7 @@ local fishingLoopThread = nil -- Dùng để quản lý luồng chạy ngầm
 -- Hàm giả lập click chuột trái
 local function leftClick()
     VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 0)
-    task.wait(0.01)
+    task.wait(0.05)
     VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 0)
 end
 
@@ -56,7 +56,7 @@ local function clickGuiElement(btn)
     
     -- Tiến hành click chuột trái chính xác vào tâm nút
     VirtualInputManager:SendMouseButtonEvent(posX, posY, 0, true, game, 0)
-    task.wait(0.01)
+    task.wait(0.05)
     VirtualInputManager:SendMouseButtonEvent(posX, posY, 0, false, game, 0)
 end
 
@@ -120,7 +120,7 @@ local function solveColorMinigame()
         -- Gọi hàm click tọa độ thực tế thay cho getconnections
         clickGuiElement(targetButton)
         
-        task.wait(0.1) -- Chờ minigame nhận diện click trước khi mở lượt tiếp theo
+        task.wait(0.23) -- Chờ minigame nhận diện click trước khi mở lượt tiếp theo
     else
         warn("❌ Không tìm thấy nút nào có màu khác biệt!")
     end
