@@ -3,7 +3,7 @@ if _G.running then
 end
 _G.running = true
 
-local baseUrl = "https://github.com/hickwhither/onepiece-final-script/raw/refs/heads/master/src/"
+local baseUrl = "https://github.com/K-SuMinh/onepiece-final-script/raw/refs/heads/master/src/"
 
 local function fetch(name)
     print(name)
