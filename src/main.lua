@@ -6,7 +6,7 @@ _G.running = true
 local baseUrl = "https://github.com/hickwhither/onepiece-final-c/raw/refs/heads/master/src/"
 
 local function fetch(name)
-    print(baseUrl .. name)
+    print(name)
     local ok, res = pcall(function() return loadstring(game:HttpGet(baseUrl .. name))() end)
     if not ok then
         warn("Error loading module " .. name .. ": " .. tostring(res))

@@ -290,7 +290,7 @@ create("UIListLayout", {
 })
 
 local categoryButtons = {}
-local categories = { "Movement", "Visual", "ESP", "Auto"}
+local categories = { "Movement", "Visual", "Auto", "ESP"}
 
 local function updateCategoryButtonStyles()
     for categoryName, button in pairs(categoryButtons) do
@@ -354,11 +354,11 @@ UI.createButton("NoFog", true, nil, "Visual")
 
 UI.createButton("Fishing", true, nil, "Auto")
 
-UI.createESPOptionRow("CaptureThePoint", "ESP")
-UI.createESPOptionRow("Scrap", "ESP")
-UI.createESPOptionRow("Entities", "ESP")
-UI.createESPOptionRow("NPC", "ESP")
-UI.createESPOptionRow("Player", "ESP")
+-- UI.createESPOptionRow("CaptureThePoint", "ESP")
+-- UI.createESPOptionRow("Scrap", "ESP")
+-- UI.createESPOptionRow("Entities", "ESP")
+-- UI.createESPOptionRow("NPC", "ESP")
+-- UI.createESPOptionRow("Player", "ESP")
 
 ----------------------------------------------------------------
 -- PHÍM TẮT
