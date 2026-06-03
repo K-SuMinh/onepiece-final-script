@@ -120,7 +120,7 @@ local function solveColorMinigame()
         -- Gọi hàm click tọa độ thực tế thay cho getconnections
         clickGuiElement(targetButton)
         
-        task.wait(0.05) -- Chờ minigame nhận diện click trước khi mở lượt tiếp theo
+        task.wait(0.1) -- Chờ minigame nhận diện click trước khi mở lượt tiếp theo
     else
         warn("❌ Không tìm thấy nút nào có màu khác biệt!")
     end
