@@ -43,9 +43,17 @@ end
 
 -- Hàm giả lập click chuột theo tọa độ của Nút
 local function clickGuiElement(btn)
-    -- leu leu center
-    local posX = btn.AbsolutePosition.X + 10
-    local posY = btn.AbsolutePosition.Y + 10
+    -- Tính toán tọa độ tâm (Center) của nút bấm
+    if btn:FindFirstChild("UICorner") then btn.UICorner:Destroy() end
+    local posX = btn.AbsolutePosition.X + 5
+    local posY = btn.AbsolutePosition.Y + 5
+    
+    -- Xử lý bù trừ tọa độ nếu giao diện bị dính thanh Topbar của Roblox (khoảng 36px)
+    local screenGui = getScreenGui(btn)
+    if screenGui and not screenGui.IgnoreGuiInset then
+        local inset = GuiService:GetGuiInset()
+        posY = posY + inset.Y
+    end
     
     -- Tiến hành click chuột trái chính xác vào tâm nút
     VirtualInputManager:SendMouseButtonEvent(posX, posY, 0, true, game, 0)
