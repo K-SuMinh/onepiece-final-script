@@ -30,4 +30,4 @@ fetch("mods/NoFog.lua")
 
 fetch("mods/Fishing.lua")
 
-print("OK! Modules loaded from " .. baseUrl)
+print("OK All modules loaded!")
